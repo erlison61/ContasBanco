@@ -7,25 +7,26 @@ public class CadastroDeContas{
     
     
     public CadastroDeContas(){
-
         this.contas=new ArrayList<>();
-     
-    }
-    
-    public void adicionarConta(){
-        contas.add(conta);  
-
     }
     
     public void addContas(Conta conta){
         contas.add(conta);
     }
     
-
     public Conta searchConta(String nome){
         for(Conta conta:contas){
            if(conta.getNomeDoCliente().equals(nome)) return conta;
         }
         return null;
     }
+    
+    public double calcularTotal(){
+        double total=0;
+        for(Conta conta:contas){
+             total+=conta.calcularValor();
+        }
+        return total;
+    }
+   
 }
