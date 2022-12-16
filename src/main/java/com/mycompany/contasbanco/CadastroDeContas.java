@@ -7,13 +7,11 @@ public class CadastroDeContas {
     private ArrayList<String> contas;
     
     
-    public void adicionarConta(){
-        Scanner input= new Scanner(System.in);
+    public CadastroDeContas(){
         contas = new ArrayList<>();
-        
-        System.out.print("digite o nome da conta:");
-        String conta=input.next();
-        
+    }
+    
+    public void adicionarConta(){
         contas.add(conta);  
     }
     
